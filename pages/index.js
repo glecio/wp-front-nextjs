@@ -13,8 +13,6 @@ export default function Home(props) {
 
 }
 
-
-
 export const getStaticProps = async() => {
   const {data} = await client.query(
     {
@@ -31,11 +29,9 @@ export const getStaticProps = async() => {
     }
   )
 
-  const blocks = cleanAndTransformBlocks(data.nodeByUri.blocks)
-
   return {
     props: {
-      blocks
+      blocks: cleanAndTransformBlocks(data.nodeByUri.blocks) // atribui ids 
       
     }
   }
