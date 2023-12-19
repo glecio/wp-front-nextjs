@@ -14,9 +14,10 @@ export const BlockRenderer = ({blocks}) => {
             }
 
             case 'core/cover' : {
-                return <Cover key={block.id} background={block.attributes.url}>
-                    <BlockRenderer blocks={block.innerBlocks} />
-                </Cover>
+                return (
+                    <Cover key={block.id} background={block.attributes.url}>
+                        <BlockRenderer blocks={block.innerBlocks} />
+                    </Cover>)
             }
             case 'core/paragraph' : {
                 console.log("paragrafo")
