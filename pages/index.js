@@ -32,7 +32,6 @@ export const getStaticProps = async() => {
   return {
     props: {
       blocks: cleanAndTransformBlocks(data.nodeByUri.blocks) // atribui ids 
-      
     }
   }
 }
